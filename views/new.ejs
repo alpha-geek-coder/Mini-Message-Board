@@ -1,0 +1,16 @@
+<html lang="en">
+
+<%- include('./partials/head', {title}) %>
+  <body>
+    <%- include('./partials/navbar', {links: links}) %>
+    <div class="create-blog content">
+    <form action="/message/new" method="POST">
+      <label for="user">User:</label>
+      <input type="text" id="user" name="user" required>
+      <label for="text">Text:</label>
+      <textarea id="text" name="text" required></textarea>
+      <button>Submit</button>
+    </form>
+</div>
+</body>
+</html>

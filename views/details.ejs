@@ -1,0 +1,15 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/navbar.ejs") %>
+
+  <div class="details content">
+    <h2>Sent to: <%= message.user %></h2>
+    <div class="content">
+      <p><%= message.text %></p>
+      <p>Created at: <%= message.added %></p>
+    </div>
+  </div>
+</body>
+</html>

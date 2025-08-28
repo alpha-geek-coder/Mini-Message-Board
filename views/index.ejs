@@ -1,0 +1,15 @@
+<!-- index.ejs -->
+<html>
+    <%- include('./partials/head', {title}) %>
+  <body>
+    <%- include('./partials/navbar', {links: links}) %>
+    <ul>
+        <% messages.forEach((message, index) => { %>
+        <a href="/message/<%= index %>">
+          <li><%= message.text %></li>
+        </a>
+        <% }); %>
+      </ul>
+
+  </body>
+</html>
