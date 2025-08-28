@@ -8,11 +8,11 @@ import {messageRouter} from './routes/messageRouter.js';
 const app = express();
 
 
-const viewPath = path.join(process.cwd(), '..', "views");
+const viewPath = path.join(process.cwd(), "views");
 app.set("views", viewPath);
 app.set('view engine', 'ejs');
 
-app.use(express.static('../public'))
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 

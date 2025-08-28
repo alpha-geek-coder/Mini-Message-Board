@@ -3,13 +3,18 @@
     <%- include('./partials/head', {title}) %>
   <body>
     <%- include('./partials/navbar', {links: links}) %>
-    <ul>
-        <% messages.forEach((message, index) => { %>
-        <a href="/message/<%= index %>">
-          <li><%= message.text %></li>
-        </a>
-        <% }); %>
-      </ul>
+
+    <h2>All Messages</h2>
+    <% if(messages.length > 0) { %>
+        <% messages.forEach((message, index)  => { %>
+            <a class="single" href="/message/<%= index %>">
+                <h3 class="title"><%= message.user%></h3>
+                <p class="snippet"><%= message.text%></p>
+            </a>
+        <% })%>
+    <% } else { %>
+        <p>There are no messages to display.</p>
+    <% } %>
 
   </body>
 </html>
